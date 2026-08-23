@@ -103,4 +103,3 @@ QuickAdd のマクロとホットキーは `quickadd/data.json` と `hotkeys.jso
 | プラグイン／テーマ本体（`main.js` など） | 22MB あり、バージョンが固定されてしまう。ストアから入れる |
 | `workspace.json` | ペイン配置は端末ごとの状態 |
 | `mermaid-tools` の `data.json` | プラグイン既定のスニペット集（36KB）で、インストール時に生成される |
-| Obsidian Git の設定 | 端末固有の値を含みうるうえ、Vault の構成とは無関係なので入れない |
