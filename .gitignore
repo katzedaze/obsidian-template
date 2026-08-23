@@ -6,7 +6,6 @@
 .obsidian/plugins/*/manifest.json
 .obsidian/plugins/*/styles.css
 .obsidian/plugins/*/*.js.map
-.obsidian/plugins/obsidian-git/obsidian_askpass.sh
 .obsidian/themes/
 .obsidian/icons/
 

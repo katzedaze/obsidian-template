@@ -9,11 +9,10 @@ tags: [setup]
 
 バージョンは設定を書き出した時点の動作確認バージョン。新しいものが出ていればそれで構わない。
 
-## コミュニティプラグイン（21 個）
+## コミュニティプラグイン（20 個）
 
 | プラグイン | ID | 確認バージョン | 位置づけ |
 |---|---|---|---|
-| Git | `obsidian-git` | 2.39.0 | 基盤（任意） |
 | Dataview | `dataview` | 0.5.68 | **必須**（ダッシュボード） |
 | Templater | `templater-obsidian` | 2.25.0 | **必須**（テンプレート自動適用） |
 | QuickAdd | `quickadd` | 2.22.0 | **必須**（`Ctrl+Alt+N`） |
@@ -39,7 +38,7 @@ tags: [setup]
 
 ### 設定が入っているもの／入っていないもの
 
-`data.json` を同梱しているのは次の 14 個 — Git / Homepage / Templater / QuickAdd / Periodic Notes / Full Calendar / Tasks / Excalidraw / Omnisearch / Linter / Advanced Tables / Auto Card Link / Iconize / Minimal Theme Settings。
+`data.json` を同梱しているのは次の 13 個 — Homepage / Templater / QuickAdd / Periodic Notes / Full Calendar / Tasks / Excalidraw / Omnisearch / Linter / Advanced Tables / Auto Card Link / Iconize / Minimal Theme Settings。
 
 同梱していないもの（Dataview / Kanban / Mind Map / Style Settings / Commander / Paste image rename / Mermaid Tools）は**すべて既定値で動く**。Mermaid Tools の `data.json` はプラグイン既定のスニペット集 36KB なので、インストール時の自動生成に任せている。
 
@@ -53,7 +52,6 @@ tags: [setup]
 | Excalidraw | 保存先 / ライブラリ / スクリプト / CJK フォント | すべて `98_Assets/Excalidraw` 配下 |
 | Homepage | 対象 / `refreshDataview` | `Welcome` / `true`（開くたびに再計算） |
 | QuickAdd | choice | `new-dated-file`（Macro、`Ctrl+Alt+N`） |
-| Git | `autoSaveInterval` / `autoPullOnBoot` / `pullBeforePush` | 10 分 / `true` / `true` |
 
 Excalidraw は `loadJapaneseFonts: true`。**フォント本体は初回作図時に自動ダウンロードされ `98_Assets/Excalidraw/CJK Fonts` に置かれる**ので、初回だけ少し待つ。OFF のままだと図中の日本語を PNG/SVG に書き出したとき字形が崩れることがある。
 

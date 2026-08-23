@@ -43,9 +43,9 @@ PARA ベースの Obsidian Vault テンプレート。**フォルダ骨格・テ
 
 `appearance.json` は Minimal テーマ（by @kepano）を指している。設定 → 外観 → テーマを管理 から Minimal を入れると、`obsidian-minimal-settings` の設定値（行幅・文字サイズなど）がそのまま効く。入れない場合は既定テーマで動く（エラーにはならない）。
 
-### 4. Git（任意）
+### 4. バージョン管理（任意）
 
-Obsidian Git の設定（10 分間隔の自動コミット・起動時 pull）は入っているが、リポジトリの初期化はしていない。使うなら:
+Vault を Git で管理するなら、初期化は各自で行う:
 
 ```sh
 git init
@@ -103,4 +103,4 @@ QuickAdd のマクロとホットキーは `quickadd/data.json` と `hotkeys.jso
 | プラグイン／テーマ本体（`main.js` など） | 22MB あり、バージョンが固定されてしまう。ストアから入れる |
 | `workspace.json` | ペイン配置は端末ごとの状態 |
 | `mermaid-tools` の `data.json` | プラグイン既定のスニペット集（36KB）で、インストール時に生成される |
-| Obsidian Git の `basePath` / `gitDir` | 端末固有パス。未設定のままにしてある |
+| Obsidian Git の設定 | 端末固有の値を含みうるうえ、Vault の構成とは無関係なので入れない |
