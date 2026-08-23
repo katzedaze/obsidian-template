@@ -1,0 +1,25 @@
+{
+  "data_version": 2,
+  "templates_folder": "90_Templates",
+  "trigger_on_file_creation": true,
+  "trigger_on_file_creation_mode": "folder",
+  "folder_templates": [
+    {
+      "folder": "00_INBOX",
+      "template": "90_Templates/Note.md"
+    },
+    {
+      "folder": "10_Projects",
+      "template": "90_Templates/Project.md"
+    },
+    {
+      "folder": "40_Journal",
+      "template": "90_Templates/Daily.md"
+    }
+  ],
+  "ignore_folders_on_creation": [
+    "40_Journal/Events",
+    "90_Templates",
+    "98_Assets"
+  ]
+}

@@ -1,0 +1,22 @@
+# ---- プラグイン／テーマ本体は追跡しない ----
+# 設定（data.json）だけを追跡し、コードは Obsidian のコミュニティストアから入れる。
+# インストールすると main.js / manifest.json が同じフォルダに落ちて、
+# ここにある data.json がそのまま設定として読まれる。
+.obsidian/plugins/*/main.js
+.obsidian/plugins/*/manifest.json
+.obsidian/plugins/*/styles.css
+.obsidian/plugins/*/*.js.map
+.obsidian/plugins/obsidian-git/obsidian_askpass.sh
+.obsidian/themes/
+.obsidian/icons/
+
+# ---- 端末固有・自動生成 ----
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
+.trash/
+
+# ---- OS のゴミ ----
+.DS_Store
+Thumbs.db
+desktop.ini
