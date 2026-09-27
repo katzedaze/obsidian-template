@@ -2,6 +2,7 @@
   "cssTheme": "Minimal",
   "accentColor": "",
   "enabledCssSnippets": [
-    "mermaid-fit"
+    "mermaid-fit",
+    "readable-width"
   ]
 }

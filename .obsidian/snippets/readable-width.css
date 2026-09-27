@@ -1,0 +1,21 @@
+/* 本文の最大幅を、テーマに関係なく約 1280px（80rem）にする。
+
+   Obsidian 本体の「行の長さを読みやすくする」は、変数 --file-line-width（既定 700px）を
+   本文の最大幅に使う。ここでそれを 80rem に上書きする。
+
+   Minimal テーマはこの変数を使わず、Minimal Theme Settings の行幅（--line-width）と
+   最大幅（--max-width）で幅を決める。Minimal を入れている場合はそちらの値（80 / 88%）が効き、
+   このスニペットとはぶつからない。
+
+   画面が狭いときに表示領域の 88% までに抑える上限は、外側の枠にだけ掛ける。
+   変数そのものに % を入れると、入れ子の要素ごとに 88% が重なって縮むため。
+   Minimal 使用時（Minimal Theme Settings が body に minimal-theme を付ける）は掛けない。 */
+
+body {
+  --file-line-width: 80rem;
+}
+
+body:not(.minimal-theme) .markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer,
+body:not(.minimal-theme) .markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
+  max-width: min(var(--file-line-width), 88%);
+}
