@@ -14,23 +14,23 @@ tags: [setup]
 | プラグイン | ID | 確認バージョン | 位置づけ |
 |---|---|---|---|
 | Dataview | `dataview` | 0.5.68 | **必須**（ダッシュボード） |
-| Templater | `templater-obsidian` | 2.25.0 | **必須**（テンプレート自動適用） |
-| QuickAdd | `quickadd` | 2.22.0 | **必須**（`Ctrl+Alt+N`） |
-| Homepage | `homepage` | 4.4.4 | **必須**（起動時に Welcome） |
+| Templater | `templater-obsidian` | 2.25.1 | **必須**（テンプレート自動適用） |
+| QuickAdd | `quickadd` | 2.27.0 | **必須**（`Ctrl+Alt+N`） |
+| Homepage | `homepage` | 4.5.0 | **必須**（起動時に Welcome） |
 | Periodic Notes | `periodic-notes` | 0.0.17 | **必須**（デイリーノート） |
 | Full Calendar | `obsidian-full-calendar` | 0.10.7 | 予定管理 |
-| Tasks | `obsidian-tasks-plugin` | 8.3.0 | タスク管理 |
-| Omnisearch | `omnisearch` | 1.30.1 | 全文検索 |
-| Excalidraw | `obsidian-excalidraw-plugin` | 2.26.4 | 作図 |
+| Tasks | `obsidian-tasks-plugin` | 8.4.0 | タスク管理 |
+| Omnisearch | `omnisearch` | 1.31.0 | 全文検索 |
+| Excalidraw | `obsidian-excalidraw-plugin` | 2.27.3 | 作図 |
 | Advanced Tables | `table-editor-obsidian` | 0.23.2 | 表編集 |
-| Linter | `obsidian-linter` | 1.32.0 | 整形（既定は無効） |
+| Linter | `obsidian-linter` | 1.33.0 | 整形（既定は無効） |
 | Paste image rename | `obsidian-paste-image-rename` | 1.6.1 | 画像リネーム |
 | Auto Card Link | `auto-card-link` | 1.2.3 | URL のカード化 |
 | Mermaid Tools | `mermaid-tools` | 1.4.1 | Mermaid スニペット |
 | Mind Map | `obsidian-mind-map` | 1.1.0 | 見出しのマインドマップ表示 |
 | Kanban | `obsidian-kanban` | 2.0.51 | カンバン |
 | Iconize | `obsidian-icon-folder` | 2.14.7 | フォルダアイコン |
-| Commander | `cmdr` | 0.5.8 | コマンド配置 |
+| Commander | `cmdr` | 0.5.12 | コマンド配置 |
 | Style Settings | `obsidian-style-settings` | 1.0.9 | テーマ微調整 |
 | Minimal Theme Settings | `obsidian-minimal-settings` | 9.0.0 | Minimal 用設定 UI |
 
@@ -77,7 +77,23 @@ Tasks は `globalFilter` が空なので **Vault 内の全チェックボック�
 
 ## テーマ
 
-`appearance.json` は `cssTheme: "Minimal"`（by @kepano）。テーマ本体は同梱していないので、設定 → 外観 → テーマを管理 からインストールする。`obsidian-minimal-settings` の `data.json`（行幅 40 / 最大幅 88 / 本文 16px / 行間 1.5 など）が効くのは Minimal を入れたときだけ。入れなくても Vault は問題なく動く。
+`appearance.json` は `cssTheme: "Minimal"`（by @kepano）。テーマ本体は同梱していないので、設定 → 外観 → テーマを管理 からインストールする。`obsidian-minimal-settings` の `data.json`（行幅 80 / 広い行幅 88 / 最大幅 88% / 本文 16px / 行間 1.5 など）が効くのは Minimal を入れたときだけ。入れなくても Vault は問題なく動く。確認バージョンは Minimal 9.0.2。
+
+### 表示領域の横幅
+
+「行の長さを読みやすくする」（`app.json` の `readableLineLength`）はオンのまま、本文の最大幅を Minimal の行幅で決めている。
+
+| 設定 | 値 | 意味 |
+|---|---|---|
+| 行幅（`lineWidth`） | 80 | 本文の幅の上限。約 1280px（16px の日本語でおよそ 80 文字） |
+| 広い行幅（`lineWidthWide`） | 88 | `cssclasses: [wide]` を付けたノートや幅広表示の要素に使う幅 |
+| 最大幅（`maxWidth`） | 88 | 表示領域に対する上限（%）。画面が狭いときはこちらが効く |
+
+1920x1080 の画面でファイル一覧を開いた状態で、本文が約 1280px になり左右に少し余白が残る幅にしてある。Windows の表示倍率が 125% など表示領域が狭い環境では、最大幅 88% で自動的に収まる。もっと狭くしたい場合は、設定 → Minimal Theme Settings → Line width で値を下げる（以前の既定は 40）。
+
+## CSS スニペット
+
+`.obsidian/snippets/mermaid-fit.css` を同梱し、`appearance.json` の `enabledCssSnippets` で有効にしてある。Mermaid の図は自然な幅を `max-width` で書き込むため、本文より広い図が右にはみ出して横スクロールになる。このスニペットで図の上限を本文の幅に置き換える。不要なら 設定 → 外観 → CSS スニペット でオフにする。
 
 ## QuickAdd マクロを手で作り直す場合
 

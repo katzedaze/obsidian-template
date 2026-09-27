@@ -1,4 +1,7 @@
 {
   "cssTheme": "Minimal",
-  "accentColor": ""
+  "accentColor": "",
+  "enabledCssSnippets": [
+    "mermaid-fit"
+  ]
 }

@@ -1,0 +1,8 @@
+/* Mermaid の図を本文の幅に収める。
+   Mermaid は図の自然な幅を style="max-width: …px" で書き込むので、
+   本文より広い図は右にはみ出して横スクロールになる。上限を本文の幅に置き換える。 */
+.markdown-rendered .mermaid svg,
+.markdown-source-view .mermaid svg {
+  max-width: 100% !important;
+  height: auto !important;
+}

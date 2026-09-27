@@ -41,7 +41,9 @@ PARA ベースの Obsidian Vault テンプレート。**フォルダ骨格・テ
 
 ### 3. テーマ（任意）
 
-`appearance.json` は Minimal テーマ（by @kepano）を指している。設定 → 外観 → テーマを管理 から Minimal を入れると、`obsidian-minimal-settings` の設定値（行幅・文字サイズなど）がそのまま効く。入れない場合は既定テーマで動く（エラーにはならない）。
+`appearance.json` は Minimal テーマ（by @kepano）を指している。設定 → 外観 → テーマを管理 から Minimal を入れると、`obsidian-minimal-settings` の設定値（行幅 80・最大幅 88% ・文字サイズなど）がそのまま効く。1920x1080 の画面で本文が約 1280px になる幅にしてある（詳細は [[PLUGINS]] の「表示領域の横幅」）。入れない場合は既定テーマで動く（エラーにはならない）。
+
+Mermaid の図を本文の幅に収める CSS スニペット（`.obsidian/snippets/mermaid-fit.css`）も有効にしてある。
 
 ### 4. バージョン管理（任意）
 
